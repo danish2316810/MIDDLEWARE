@@ -1,0 +1,38 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Administrator"
+  },{
+    "name": "$XSAPPNAME.Viewer",
+    "description": "Viewer"
+  }
+  ],
+  "attributes": [
+    {
+      "name" : "Division",
+      "description" : "Division Attribute",
+       "valueType" : "string"
+    },{
+      "name" : "Division",
+      "description" : "Division Attribute",
+       "valueType" : "string"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Administrator",
+      "description": "Administrator",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }, {
+      "name": "Viewer",
+      "description": "Viewer",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    }
+  ],
+  "authorities-inheritance": false
+}

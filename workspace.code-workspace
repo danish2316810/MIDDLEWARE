@@ -1,0 +1,10 @@
+{
+    "folders": [
+        {
+            "path": "massUpload"
+        }
+    ],
+    "settings": {
+        "SAP HANA Project Explorer.bind.confirm automatic undeployment": false
+    }
+}
