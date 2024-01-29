@@ -1,10 +1,13 @@
 {
   "welcomeFile": "app/index.html",
+  "authenticationMethod": "route",
   "routes": [
     {
       "source": "^/app/(.*)$",
       "target": "$1",
       "localDir": ".",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false,
       "cacheControl": "no-cache, no-store, must-revalidate"
     },
     {
@@ -15,8 +18,9 @@
     {
       "source": "^/(.*)$",
       "target": "$1",
+      "authenticationType": "xsuaa",
       "destination": "srv-api",
-      "csrfProtection": true
+      "csrfProtection": false
     }
   ]
 }
