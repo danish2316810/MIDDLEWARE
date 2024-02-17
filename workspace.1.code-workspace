@@ -5,6 +5,7 @@
         }
     ],
     "settings": {
-        "SAP HANA Project Explorer.bind.confirm automatic undeployment": false
+        "SAP HANA Project Explorer.bind.confirm automatic undeployment": false,
+        "SAP HANA Database Artifacts.lastSelectedTargetPath": "/home/user/projects/forAuthentication/db"
     }
 }

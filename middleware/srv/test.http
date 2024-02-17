@@ -1,0 +1,60 @@
+GET http://localhost:4004/odata/v4/catalog
+
+###
+GET http://localhost:4004/odata/v4/catalog/$metadata
+
+###
+GET http://localhost:4004/odata/v4/catalog/Products
+###
+POST http://localhost:4004/odata/v4/catalog/Products
+Content-Type: application/json
+ 
+   
+   {
+      "ID": 102,
+      "Name": "sawbig",
+      "Description": "cutting woods",
+      "Price": 24000,
+      "Rating": 5
+    }
+
+###
+GET http://localhost:4004/odata/v4/catalog/Products(1)?$expand=Supplier
+
+###
+https://services.odata.org/Experimental/OData/OData.svc/Products?$expand=Supplier
+###
+
+GET http://localhost:4004/odata/v4/catalog/bussinessPartner('1b3d3d1c-9245-4e03-8e04-66c162175153')?$expand=ADDRESS_GUID
+###
+
+GET http://localhost:4004/odata/v4/catalog/bussinessPartner?$expand=ADDRESS_GUID
+
+###
+GET http://localhost:4004/odata/v4/catalog/purchaseOrder
+###
+GET http://localhost:4004/odata/v4/catalog/purchaseOrder/4cb01d7b-3e46-4c6d-9a20-1d7df0c3ca59
+
+###
+GET http://localhost:4004/odata/v4/catalog/address
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/address
+Content-Type: application/json
+
+  {
+    "NODE_KEY": "10b7c582-7d70-4f68-6a0b6-9328142c6e7",
+      "CITY": "Ranchi",
+      "POSTAL_CODE": "834001",
+      "BUILDING": "Miracle",
+      "STREET": "Bano Manzil",
+      "COUNTRY": "India"
+  }
+
+###
+GET http://localhost:4004/odata/v4/catalog/purchaseOrder
+###
+
+GET http://localhost:4004/odata/v4/catalog/purchaseOrder?$expand=LINE_ITEMS
+
